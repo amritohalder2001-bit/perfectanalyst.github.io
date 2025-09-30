@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Amrito Option Chain</title>
+    <style>
+        body {
+            background: #f4f4f8;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px #aaa;
+            padding: 32px;
+        }
+        h1 {
+            text-align: center;
+            color: #d03737;
+            margin-bottom: 18px;
+            font-size: 2.2em;
+        }
+        .option-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: auto;
+        }
+        .option-table th, .option-table td {
+            border: 1px solid #ccc;
+            padding: 6px 10px;
+            text-align: center;
+        }
+        .option-table th {
+            background: #ececec;
+            font-weight: bold;
+        }
+        .strike {
+            background: orange;
+            color: #fff;
+            font-weight: bold;
+        }
+        .call-side {
+            background: #e9ffe9;
+        }
+        .put-side {
+            background: #ffe9e9;
+        }
+        .breakout {
+            background: #d2f8d2;
+            font-size: 0.95em;
+            font-style: italic;
+        }
+        .breakdown {
+            background: #f8d2d2;
+            font-size: 0.95em;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Amrito Option Chain</h1>
+        <table class="option-table">
+            <tr>
+                <th colspan="5" class="call-side">CALL SIDE</th>
+                <th class="strike">STRIKE</th>
+                <th colspan="5" class="put-side">PUT SIDE</th>
+            </tr>
+            <tr>
+                <th>T.V.</th>
+                <th>Chg</th>
+                <th>OI</th>
+                <th>Volume</th>
+                <th>S-Reversal</th>
+                <th class="strike">ATM/STRIKE</th>
+                <th>S-Reversal</th>
+                <th>Volume</th>
+                <th>OI</th>
+                <th>Chg</th>
+                <th>T.V.</th>
+            </tr>
+            <!-- Sample Row -->
+            <tr>
+                <td>9.15</td>
+                <td>0.02%</td>
+                <td>26</td>
+                <td>37</td>
+                <td class="breakout">Break Out</td>
+                <td class="strike">24600</td>
+                <td class="breakout">Break Out</td>
+                <td>23958</td>
+                <td>10410</td>
+                <td>4.95%</td>
+                <td>11.42</td>
+            </tr>
+            <tr>
+                <td>3.45</td>
+                <td>1.09%</td>
+                <td>1099</td>
+                <td>2633</td>
+                <td class="breakout">Break Out</td>
+                <td class="strike">24700</td>
+                <td class="breakdown">Break Down</td>
+                <td>5820</td>
+                <td>14700</td>
+                <td>6.13%</td>
+                <td>15.22</td>
+            </tr>
+            <tr>
+                <td>12.06</td>
+                <td>100%</td>
+                <td>15828</td>
+                <td>27174</td>
+                <td class="breakout">Break Out</td>
+                <td class="strike">24800</td>
+                <td class="breakdown">Break Down</td>
+                <td>21212</td>
+                <td>21929</td>
+                <td>9.51%</td>
+                <td>18.45</td>
+            </tr>
+            <!-- Add more rows as needed, following above pattern -->
+        </table>
+    </div>
+</body>
+</html>
